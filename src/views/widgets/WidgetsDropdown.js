@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import {
@@ -19,6 +19,35 @@ const WidgetsDropdown = (props) => {
   const widgetChartRef1 = useRef(null)
   const widgetChartRef2 = useRef(null)
 
+  const [salesData, setSalesData] = useState({ value: 26000, change: -12.4 })
+  const [incomeData, setIncomeData] = useState({ value: 6200, change: 40.9 })
+  const [conversionRateData, setConversionRateData] = useState({ value: 2.49, change: 84.7 })
+  const [sessionsData, setSessionsData] = useState({ value: 44000, change: -23.6 })
+
+  const updateSalesData = () => {
+    const newValue = Math.floor(Math.random() * 50000) + 10000;
+    const newChange = (Math.random() * 50 - 25).toFixed(1);
+    setSalesData({ value: newValue, change: parseFloat(newChange) });
+  }
+
+  const updateIncomeData = () => {
+    const newValue = (Math.random() * 10000 + 1000).toFixed(2);
+    const newChange = (Math.random() * 50 - 25).toFixed(1);
+    setIncomeData({ value: parseFloat(newValue), change: parseFloat(newChange) });
+  }
+
+  const updateConversionRateData = () => {
+    const newValue = (Math.random() * 5).toFixed(2);
+    const newChange = (Math.random() * 50 - 25).toFixed(1);
+    setConversionRateData({ value: parseFloat(newValue), change: parseFloat(newChange) });
+  }
+
+  const updateSessionsData = () => {
+    const newValue = Math.floor(Math.random() * 50000) + 10000;
+    const newChange = (Math.random() * 50 - 25).toFixed(1);
+    setSessionsData({ value: newValue, change: parseFloat(newChange) });
+  }
+
   useEffect(() => {
     document.documentElement.addEventListener('ColorSchemeChange', () => {
       if (widgetChartRef1.current) {
@@ -27,7 +56,6 @@ const WidgetsDropdown = (props) => {
           widgetChartRef1.current.update()
         })
       }
-
       if (widgetChartRef2.current) {
         setTimeout(() => {
           widgetChartRef2.current.data.datasets[0].pointBackgroundColor = getStyle('--cui-info')
@@ -35,7 +63,7 @@ const WidgetsDropdown = (props) => {
         })
       }
     })
-  }, [widgetChartRef1, widgetChartRef2])
+  }, [widgetChartRef1])
 
   return (
     <CRow className={props.className} xs={{ gutter: 4 }}>
@@ -44,23 +72,21 @@ const WidgetsDropdown = (props) => {
           color="primary"
           value={
             <>
-              26K{' '}
+              {salesData.value.toLocaleString()}K{' '}
               <span className="fs-6 fw-normal">
-                (-12.4% <CIcon icon={cilArrowBottom} />)
+                ({salesData.change}% <CIcon icon={salesData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }
-          title="Users"
+          title="Sales"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="text-white p-0">
                 <CIcon icon={cilOptions} />
               </CDropdownToggle>
               <CDropdownMenu>
-                <CDropdownItem>Action</CDropdownItem>
-                <CDropdownItem>Another action</CDropdownItem>
-                <CDropdownItem>Something else here...</CDropdownItem>
-                <CDropdownItem disabled>Disabled action</CDropdownItem>
+                <CDropdownItem onClick={updateSalesData}>update</CDropdownItem>
+                <CDropdownItem disabled>delete</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
           }
@@ -73,7 +99,7 @@ const WidgetsDropdown = (props) => {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [
                   {
-                    label: 'My First dataset',
+                    label: 'Sales Trend',
                     backgroundColor: 'transparent',
                     borderColor: 'rgba(255,255,255,.55)',
                     pointBackgroundColor: getStyle('--cui-primary'),
@@ -134,9 +160,9 @@ const WidgetsDropdown = (props) => {
           color="info"
           value={
             <>
-              $6.200{' '}
+              ${incomeData.value} {' '}
               <span className="fs-6 fw-normal">
-                (40.9% <CIcon icon={cilArrowTop} />)
+                ({incomeData.change}% <CIcon icon={incomeData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }
@@ -147,10 +173,8 @@ const WidgetsDropdown = (props) => {
                 <CIcon icon={cilOptions} />
               </CDropdownToggle>
               <CDropdownMenu>
-                <CDropdownItem>Action</CDropdownItem>
-                <CDropdownItem>Another action</CDropdownItem>
-                <CDropdownItem>Something else here...</CDropdownItem>
-                <CDropdownItem disabled>Disabled action</CDropdownItem>
+                <CDropdownItem onClick={updateIncomeData}>update</CDropdownItem>
+                <CDropdownItem disabled>delete</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
           }
@@ -223,9 +247,9 @@ const WidgetsDropdown = (props) => {
           color="warning"
           value={
             <>
-              2.49%{' '}
+              {conversionRateData.value}% {' '}
               <span className="fs-6 fw-normal">
-                (84.7% <CIcon icon={cilArrowTop} />)
+                ({conversionRateData.change}% <CIcon icon={conversionRateData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }
@@ -236,10 +260,8 @@ const WidgetsDropdown = (props) => {
                 <CIcon icon={cilOptions} />
               </CDropdownToggle>
               <CDropdownMenu>
-                <CDropdownItem>Action</CDropdownItem>
-                <CDropdownItem>Another action</CDropdownItem>
-                <CDropdownItem>Something else here...</CDropdownItem>
-                <CDropdownItem disabled>Disabled action</CDropdownItem>
+               <CDropdownItem onClick={updateConversionRateData}>update</CDropdownItem>
+               <CDropdownItem disabled>delete</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
           }
@@ -295,9 +317,9 @@ const WidgetsDropdown = (props) => {
           color="danger"
           value={
             <>
-              44K{' '}
+              {sessionsData.value} {' '}
               <span className="fs-6 fw-normal">
-                (-23.6% <CIcon icon={cilArrowBottom} />)
+                ({sessionsData.change}% <CIcon icon={sessionsData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }
@@ -308,10 +330,8 @@ const WidgetsDropdown = (props) => {
                 <CIcon icon={cilOptions} />
               </CDropdownToggle>
               <CDropdownMenu>
-                <CDropdownItem>Action</CDropdownItem>
-                <CDropdownItem>Another action</CDropdownItem>
-                <CDropdownItem>Something else here...</CDropdownItem>
-                <CDropdownItem disabled>Disabled action</CDropdownItem>
+                <CDropdownItem onClick={updateSessionsData}>update</CDropdownItem>
+                <CDropdownItem disabled>delete</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
           }
