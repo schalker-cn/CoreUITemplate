@@ -19,7 +19,7 @@ const Charts = () => {
       <CCol xs={6}>
         <CCard className="mb-4">
           <CCardHeader>
-            Bar Chart <DocsLink name="chart" />
+            Contribution
           </CCardHeader>
           <CCardBody>
             <CChartBar
@@ -41,7 +41,7 @@ const Charts = () => {
       <CCol xs={6}>
         <CCard className="mb-4">
           <CCardHeader>
-            Line Chart <DocsLink name="chart" />
+            Dataset
           </CCardHeader>
           <CCardBody>
             <CChartLine
@@ -73,7 +73,7 @@ const Charts = () => {
       <CCol xs={6}>
         <CCard className="mb-4">
           <CCardHeader>
-            Doughnut Chart <DocsLink name="chart" />
+            Framework Popularity
           </CCardHeader>
           <CCardBody>
             <CChartDoughnut
@@ -93,82 +93,17 @@ const Charts = () => {
       <CCol xs={6}>
         <CCard className="mb-4">
           <CCardHeader>
-            Pie Chart <DocsLink name="chart" />{' '}
+            Pull Request
           </CCardHeader>
           <CCardBody>
             <CChartPie
               data={{
-                labels: ['Red', 'Green', 'Yellow'],
+                labels: ['Merged', 'Open', 'Closed'],
                 datasets: [
                   {
                     data: [300, 50, 100],
                     backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
                     hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-                  },
-                ],
-              }}
-            />
-          </CCardBody>
-        </CCard>
-      </CCol>
-      <CCol xs={6}>
-        <CCard className="mb-4">
-          <CCardHeader>
-            Polar Area Chart
-            <DocsLink name="chart" />
-          </CCardHeader>
-          <CCardBody>
-            <CChartPolarArea
-              data={{
-                labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue'],
-                datasets: [
-                  {
-                    data: [11, 16, 7, 3, 14],
-                    backgroundColor: ['#FF6384', '#4BC0C0', '#FFCE56', '#E7E9ED', '#36A2EB'],
-                  },
-                ],
-              }}
-            />
-          </CCardBody>
-        </CCard>
-      </CCol>
-      <CCol xs={6}>
-        <CCard className="mb-4">
-          <CCardHeader>
-            Radar Chart <DocsLink name="chart" />
-          </CCardHeader>
-          <CCardBody>
-            <CChartRadar
-              data={{
-                labels: [
-                  'Eating',
-                  'Drinking',
-                  'Sleeping',
-                  'Designing',
-                  'Coding',
-                  'Cycling',
-                  'Running',
-                ],
-                datasets: [
-                  {
-                    label: 'My First dataset',
-                    backgroundColor: 'rgba(220, 220, 220, 0.2)',
-                    borderColor: 'rgba(220, 220, 220, 1)',
-                    pointBackgroundColor: 'rgba(220, 220, 220, 1)',
-                    pointBorderColor: '#fff',
-                    pointHighlightFill: '#fff',
-                    pointHighlightStroke: 'rgba(220, 220, 220, 1)',
-                    data: [65, 59, 90, 81, 56, 55, 40],
-                  },
-                  {
-                    label: 'My Second dataset',
-                    backgroundColor: 'rgba(151, 187, 205, 0.2)',
-                    borderColor: 'rgba(151, 187, 205, 1)',
-                    pointBackgroundColor: 'rgba(151, 187, 205, 1)',
-                    pointBorderColor: '#fff',
-                    pointHighlightFill: '#fff',
-                    pointHighlightStroke: 'rgba(151, 187, 205, 1)',
-                    data: [28, 48, 40, 19, 96, 27, 100],
                   },
                 ],
               }}

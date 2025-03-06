@@ -7,7 +7,6 @@ import {
   CCard,
   CCardBody,
   CCardFooter,
-  CCardHeader,
   CCol,
   CProgress,
   CRow,
