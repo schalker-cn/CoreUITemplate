@@ -4,14 +4,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
   CCloseButton,
   CSidebar,
-  CSidebarBrand,
   CSidebarFooter,
   CSidebarHeader,
   CSidebarToggler,
 } from '@coreui/react'
 
 import { AppSidebarNav } from './AppSidebarNav'
-import placeholder from 'src/assets/images/placeholder.jpg'
 
 import navigation from '../_nav'
 
@@ -32,10 +30,6 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarHeader className="border-bottom">
-        <CSidebarBrand to="/">
-          <img src={placeholder} width={8} height={38} />
-          <img src={placeholder} width={8} height={38} />
-        </CSidebarBrand>
         <CCloseButton
           className="d-lg-none"
           dark
