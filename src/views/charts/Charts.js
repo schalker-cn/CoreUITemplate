@@ -5,11 +5,7 @@ import {
   CChartDoughnut,
   CChartLine,
   CChartPie,
-  CChartPolarArea,
-  CChartRadar,
 } from '@coreui/react-chartjs'
-import { DocsLink } from 'src/components'
-
 const Charts = () => {
   const random = () => Math.round(Math.random() * 100)
 
