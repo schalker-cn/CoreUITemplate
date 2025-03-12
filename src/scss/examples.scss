@@ -18,7 +18,6 @@
     margin-top: 1.5rem;
   }
 
-  // Components examples
   .preview {
     + p {
       margin-top: 2rem;
@@ -46,13 +45,11 @@
       margin-bottom: 0;
     }
 
-    // Images
     > svg + svg,
     > img + img {
       margin-left: .5rem;
     }
 
-    // Buttons
     .col > .btn,
     .col-auto > .btn,
     > .btn,
@@ -63,7 +60,6 @@
       margin-top: .5rem;
     }
 
-    // List groups
     > .list-group {
       max-width: 400px;
     }
@@ -72,7 +68,6 @@
       max-width: 100%;
     }
 
-    // Navbars
     .fixed-top,
     .sticky-top {
       position: static;
@@ -94,7 +89,6 @@
       }
     }
 
-    // Pagination
     .pagination {
       margin-top: .5rem;
       margin-bottom: .5rem;

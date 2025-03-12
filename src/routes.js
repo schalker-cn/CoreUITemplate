@@ -2,7 +2,6 @@ import React from 'react'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 
-// Base
 const Calendar = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Contacts = React.lazy(() => import('./views/base/cards/Cards'))
 const Progress = React.lazy(() => import('./views/base/progress/Progress'))
