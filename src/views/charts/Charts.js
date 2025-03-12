@@ -1,11 +1,6 @@
 import React from 'react'
 import { CCard, CCardBody, CCol, CCardHeader, CRow } from '@coreui/react'
-import {
-  CChartBar,
-  CChartDoughnut,
-  CChartLine,
-  CChartPie,
-} from '@coreui/react-chartjs'
+import { CChartBar, CChartDoughnut, CChartLine, CChartPie } from '@coreui/react-chartjs'
 const Charts = () => {
   const random = () => Math.round(Math.random() * 100)
 
@@ -14,9 +9,7 @@ const Charts = () => {
       <CCol xs={12}></CCol>
       <CCol xs={6}>
         <CCard className="mb-4">
-          <CCardHeader>
-            Contribution
-          </CCardHeader>
+          <CCardHeader>Contribution</CCardHeader>
           <CCardBody>
             <CChartBar
               data={{
@@ -36,9 +29,7 @@ const Charts = () => {
       </CCol>
       <CCol xs={6}>
         <CCard className="mb-4">
-          <CCardHeader>
-            Dataset
-          </CCardHeader>
+          <CCardHeader>Dataset</CCardHeader>
           <CCardBody>
             <CChartLine
               data={{
@@ -68,9 +59,7 @@ const Charts = () => {
       </CCol>
       <CCol xs={6}>
         <CCard className="mb-4">
-          <CCardHeader>
-            Framework Popularity
-          </CCardHeader>
+          <CCardHeader>Framework Popularity</CCardHeader>
           <CCardBody>
             <CChartDoughnut
               data={{
@@ -88,9 +77,7 @@ const Charts = () => {
       </CCol>
       <CCol xs={6}>
         <CCard className="mb-4">
-          <CCardHeader>
-            Pull Request
-          </CCardHeader>
+          <CCardHeader>Pull Request</CCardHeader>
           <CCardBody>
             <CChartPie
               data={{

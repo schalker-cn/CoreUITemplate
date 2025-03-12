@@ -28,9 +28,7 @@ const Cards = () => {
                   <CCardImage orientation="top" src={Avatar} />
                   <CCardBody>
                     <CCardTitle>John Doe</CCardTitle>
-                    <CCardText>
-                      Software Engineer at TechCorp
-                    </CCardText>
+                    <CCardText>Software Engineer at TechCorp</CCardText>
                     <CButton color="primary" href="#">
                       Go to personal page
                     </CButton>

@@ -58,21 +58,23 @@ const WidgetsBrand = (props) => {
               />
             ),
           })}
-          icon={<div
-            style={{
-              width: 52,
-              height: 52,
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              fontSize: 16,
-              fontWeight: 'bold',
-            }}
-          >
-            Facebook
-          </div>}
+          icon={
+            <div
+              style={{
+                width: 52,
+                height: 52,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: 16,
+                fontWeight: 'bold',
+              }}
+            >
+              Facebook
+            </div>
+          }
           values={[
             { title: 'friends', value: '89K' },
             { title: 'feeds', value: '459' },
@@ -106,21 +108,23 @@ const WidgetsBrand = (props) => {
               />
             ),
           })}
-          icon={<div
-            style={{
-              width: 52,
-              height: 52,
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              fontSize: 16,
-              fontWeight: 'bold',
-            }}
-          >
-            X(Twitter)
-          </div>}
+          icon={
+            <div
+              style={{
+                width: 52,
+                height: 52,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: 16,
+                fontWeight: 'bold',
+              }}
+            >
+              X(Twitter)
+            </div>
+          }
           values={[
             { title: 'followers', value: '973k' },
             { title: 'tweets', value: '1.792' },
@@ -154,21 +158,23 @@ const WidgetsBrand = (props) => {
               />
             ),
           })}
-          icon={<div
-            style={{
-              width: 52,
-              height: 52,
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              fontSize: 16,
-              fontWeight: 'bold',
-            }}
-          >
-            LinkedIn
-          </div>}
+          icon={
+            <div
+              style={{
+                width: 52,
+                height: 52,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: 16,
+                fontWeight: 'bold',
+              }}
+            >
+              LinkedIn
+            </div>
+          }
           values={[
             { title: 'contacts', value: '500' },
             { title: 'feeds', value: '1.292' },
@@ -203,21 +209,23 @@ const WidgetsBrand = (props) => {
               />
             ),
           })}
-          icon={<div
-            style={{
-              width: 52,
-              height: 52,
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              fontSize: 16,
-              fontWeight: 'bold',
-            }}
-          >
-            Calendar
-          </div>}
+          icon={
+            <div
+              style={{
+                width: 52,
+                height: 52,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: 16,
+                fontWeight: 'bold',
+              }}
+            >
+              Calendar
+            </div>
+          }
           values={[
             { title: 'events', value: '12+' },
             { title: 'meetings', value: '4' },

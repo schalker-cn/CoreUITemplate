@@ -1,9 +1,6 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
-import {
-  cilCalculator,
-  cilSpeedometer,
-} from '@coreui/icons'
+import { cilCalculator, cilSpeedometer } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
@@ -44,8 +41,8 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Analysis',
-        to: '/analysis'
-      }
+        to: '/analysis',
+      },
     ],
   },
 ]

@@ -11,7 +11,7 @@ import {
 } from '@coreui/react'
 
 import { AppSidebarNav } from './AppSidebarNav'
-import placeholder from 'src/assets/images/placeholder.jpg';
+import placeholder from 'src/assets/images/placeholder.jpg'
 
 import navigation from '../_nav'
 

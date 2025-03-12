@@ -25,27 +25,27 @@ const WidgetsDropdown = (props) => {
   const [sessionsData, setSessionsData] = useState({ value: 44000, change: -23.6 })
 
   const updateSalesData = () => {
-    const newValue = Math.floor(Math.random() * 50000) + 10000;
-    const newChange = (Math.random() * 50 - 25).toFixed(1);
-    setSalesData({ value: newValue, change: parseFloat(newChange) });
+    const newValue = Math.floor(Math.random() * 50000) + 10000
+    const newChange = (Math.random() * 50 - 25).toFixed(1)
+    setSalesData({ value: newValue, change: parseFloat(newChange) })
   }
 
   const updateIncomeData = () => {
-    const newValue = (Math.random() * 10000 + 1000).toFixed(2);
-    const newChange = (Math.random() * 50 - 25).toFixed(1);
-    setIncomeData({ value: parseFloat(newValue), change: parseFloat(newChange) });
+    const newValue = (Math.random() * 10000 + 1000).toFixed(2)
+    const newChange = (Math.random() * 50 - 25).toFixed(1)
+    setIncomeData({ value: parseFloat(newValue), change: parseFloat(newChange) })
   }
 
   const updateConversionRateData = () => {
-    const newValue = (Math.random() * 5).toFixed(2);
-    const newChange = (Math.random() * 50 - 25).toFixed(1);
-    setConversionRateData({ value: parseFloat(newValue), change: parseFloat(newChange) });
+    const newValue = (Math.random() * 5).toFixed(2)
+    const newChange = (Math.random() * 50 - 25).toFixed(1)
+    setConversionRateData({ value: parseFloat(newValue), change: parseFloat(newChange) })
   }
 
   const updateSessionsData = () => {
-    const newValue = Math.floor(Math.random() * 50000) + 10000;
-    const newChange = (Math.random() * 50 - 25).toFixed(1);
-    setSessionsData({ value: newValue, change: parseFloat(newChange) });
+    const newValue = Math.floor(Math.random() * 50000) + 10000
+    const newChange = (Math.random() * 50 - 25).toFixed(1)
+    setSessionsData({ value: newValue, change: parseFloat(newChange) })
   }
 
   useEffect(() => {
@@ -74,7 +74,8 @@ const WidgetsDropdown = (props) => {
             <>
               {salesData.value.toLocaleString()}K{' '}
               <span className="fs-6 fw-normal">
-                ({salesData.change}% <CIcon icon={salesData.change < 0 ? cilArrowBottom : cilArrowTop} />)
+                ({salesData.change}%{' '}
+                <CIcon icon={salesData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }
@@ -160,9 +161,10 @@ const WidgetsDropdown = (props) => {
           color="info"
           value={
             <>
-              ${incomeData.value} {' '}
+              ${incomeData.value}{' '}
               <span className="fs-6 fw-normal">
-                ({incomeData.change}% <CIcon icon={incomeData.change < 0 ? cilArrowBottom : cilArrowTop} />)
+                ({incomeData.change}%{' '}
+                <CIcon icon={incomeData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }
@@ -247,9 +249,10 @@ const WidgetsDropdown = (props) => {
           color="warning"
           value={
             <>
-              {conversionRateData.value}% {' '}
+              {conversionRateData.value}%{' '}
               <span className="fs-6 fw-normal">
-                ({conversionRateData.change}% <CIcon icon={conversionRateData.change < 0 ? cilArrowBottom : cilArrowTop} />)
+                ({conversionRateData.change}%{' '}
+                <CIcon icon={conversionRateData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }
@@ -260,8 +263,8 @@ const WidgetsDropdown = (props) => {
                 <CIcon icon={cilOptions} />
               </CDropdownToggle>
               <CDropdownMenu>
-               <CDropdownItem onClick={updateConversionRateData}>update</CDropdownItem>
-               <CDropdownItem disabled>delete</CDropdownItem>
+                <CDropdownItem onClick={updateConversionRateData}>update</CDropdownItem>
+                <CDropdownItem disabled>delete</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
           }
@@ -317,9 +320,10 @@ const WidgetsDropdown = (props) => {
           color="danger"
           value={
             <>
-              {sessionsData.value} {' '}
+              {sessionsData.value}{' '}
               <span className="fs-6 fw-normal">
-                ({sessionsData.change}% <CIcon icon={sessionsData.change < 0 ? cilArrowBottom : cilArrowTop} />)
+                ({sessionsData.change}%{' '}
+                <CIcon icon={sessionsData.change < 0 ? cilArrowBottom : cilArrowTop} />)
               </span>
             </>
           }

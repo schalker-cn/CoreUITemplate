@@ -10,15 +10,15 @@ const Progress = () => {
             <strong>Project Progress</strong>
           </CCardHeader>
           <CCardBody>
-              <CProgress className="mb-3">
-                <CProgressBar value={28}>development of NoteTaker</CProgressBar>
-              </CProgress>
-              <CProgress className="mb-3">
-                <CProgressBar value={68}>weekly meeting preparation</CProgressBar>
-              </CProgress>
-              <CProgress className="mb-3">
-                <CProgressBar value={15}>frontend test of CodeFlow</CProgressBar>
-              </CProgress>
+            <CProgress className="mb-3">
+              <CProgressBar value={28}>development of NoteTaker</CProgressBar>
+            </CProgress>
+            <CProgress className="mb-3">
+              <CProgressBar value={68}>weekly meeting preparation</CProgressBar>
+            </CProgress>
+            <CProgress className="mb-3">
+              <CProgressBar value={15}>frontend test of CodeFlow</CProgressBar>
+            </CProgress>
           </CCardBody>
         </CCard>
       </CCol>
