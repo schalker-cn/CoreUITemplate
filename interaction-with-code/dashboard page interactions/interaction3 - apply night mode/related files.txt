@@ -1,0 +1,15 @@
+src/assets/images/placeholder.jpg
+all files in src/scss
+all files in src/components
+all files in src/views/widgets
+all files in src/views/dashboard
+src/layout/DefaultLayout.js
+src/_nav.js
+src/App.js
+src/index.js
+src/routes.js
+src/store.js
+eslint.config.mjs
+index.html
+package.json
+vite.config.mjs
